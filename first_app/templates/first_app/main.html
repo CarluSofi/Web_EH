@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holmes Counseling Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #da8dd7; /* Light grey background */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between; /* Spacing between spans */
+            padding: 5px;
+            text-align: center;
+            border-style: hidden;
+        }
+        span {
+            flex: 0 0 30%; /* Three spans take equal width */
+            border: 1px solid #ffffff;
+            padding: 5px;
+            text-align: center;
+        }
+        header {
+            background-color: #7600bc; /* Dark grey header */
+            color: #da8dd7; /* White text */
+            padding: 2px;
+            text-align: center;
+            font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+            font-stretch:extra-expanded;
+            font-size: x-large;
+            
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White container background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+      
+        .section {
+            margin-bottom: 20px;
+            color: #7600bc;
+            font-weight: bold;
+        }
+        .section h2 {
+            border-bottom: 2px solid #7600bc; /* Dark grey border bottom */
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: #7600bc;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+            color: #7600bc;
+            background-color: #fbdede;
+            text-align: center;
+            margin-top: 10px;
+            display: block;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        a :hover{
+            color:#d90077;
+        }
+
+        p{
+            text-align: center;
+        }
+        .container1 {
+            position: relative;
+            height: 300px; /* Adjust the height of the container as needed */
+        }
+        .Evelyn{
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .insurance {
+            text-decoration:solid;
+            color: #7600bc;
+            text-align: center;
+            margin-top: 10px;
+            display: block;
+            border: none;
+            cursor: pointer;
+            font-style: italic;
+            border-radius: 5px;
+        }
+        .expereince{
+            text-align: center;
+            font-style: italic;
+        }
+        .logo{
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+    </style>
+    {% load static %}
+</head>
+<body>
+    <header>
+        <img src="{%static 'first_app/logo.png' %}" alt="Psychology logo" class="logo">
+        <h1>Holmes Counseling Services</h1>
+    </header>
+    <div class="container">
+        <section class="section">
+            <div class="container1">
+                <img src="{% static 'first_app/Evelyn_Image.jpg' %}" alt="Evelyn Image" class = "Evelyn">
+            </div>
+            <h2>Evelyn A. Greene Holmes LPC, LCADC</h2>
+            <h3 class= "expereince">Over 25 years of experience</h3>
+            <p>I offer psychological services that will help my clients to alleviate their symptoms of anxiety,depression and addiction. They will understand what they want out of life and how to get it to become healthier.</p>
+        </section>
+        <section class="section">
+            <h2>Training</h2>
+            <ul>
+                <li>
+                    <span>Cognitive Behavioral Therapy</span><span>Dialectal Behavioral Therapy</span><span>Couples and Relationship Therapy</span>
+                </li>
+            </ul>
+        </section>
+        <section class="section">
+            <h2>Contact</h2>
+            <ul>
+                <li>
+                    <span>Email: evelynholmes0374@comcast.net</span> <span>Phone: +(856)-282-6636</span>
+                </li>
+            </ul>
+        </section>
+         <section class="section">
+            <h2>More info</h2>
+            <ul>
+                <li>
+                    <span>Covered by most insurances</span> <span>Telehealth only</span>
+                </li>
+            </ul>
+        </section>
+        <a href="{% url 'contactme' %}">Click here to send a message</a>
+    </div>
+</body>
+</html>
